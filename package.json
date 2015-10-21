@@ -26,7 +26,6 @@
     "type": "git",
     "url": "https://github.com/olalonde/bitgo-bitcoin-wallet.git"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/olalonde/bitgo-bitcoin-wallet/issues"
   },
@@ -45,5 +44,5 @@
     "eslint": "^1.6.0",
     "eslint-config-airbnb": "^0.1.0"
   },
-  "version": "0.1.0"
+  "version": "0.2.0"
 }
