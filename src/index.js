@@ -5,6 +5,7 @@ class BitgoWallet {
     this.walletId = config.walletId;
     this.passphrase = config.passphrase;
     this.chain = config.chain || 0;
+    this.minConfirms = config.minConfirms;
     this._cache = {};
   }
 
@@ -43,6 +44,8 @@ class BitgoWallet {
         address,
         amount,
         walletPassphrase: this.passphrase,
+        // only choose unspent inputs with a certain number of confirmations
+        minConfirms: this.minConfirms,
       });
     })
     .then((tx) => {
