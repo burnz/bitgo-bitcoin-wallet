@@ -13,7 +13,7 @@ npm install --save bitgo-bitcoin-wallet bitgo
 ## Usage
 
 ```javascript
-import bitgoWallet from './';
+import bitgoWallet from 'bitgo-bitcoin-wallet';
 import { BitGo } from 'bitgo';
 
 const bitgo = new BitGo({

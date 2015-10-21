@@ -31,9 +31,28 @@ class BitgoWallet {
     });
   }
 
-  summary() {
-    return this._loadWallet().then((wallet) => {
+  summary({ cached } = {}) {
+    return Promise.resolve()
+    .then(() => {
+      if (cached) {
+        return this._cachedWallet();
+      }
+      return this._loadWallet();
+    })
+    .then((wallet) => {
       return wallet.wallet;
+    });
+  }
+
+  // TODO: add to abstract wallet
+  transaction({ hash }) {
+    return this._cachedWallet()
+    .then((wallet) => {
+      return wallet.getTransaction({ id: hash })
+      .then((transaction) => {
+        transaction.hash = transaction.id;
+        return transaction;
+      });
     });
   }
 
