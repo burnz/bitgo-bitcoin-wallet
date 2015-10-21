@@ -15,7 +15,11 @@
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
   },
-  "keywords": [ "bitcoin", "wallet", "abstract-bitcoin-wallet" ],
+  "keywords": [
+    "bitcoin",
+    "wallet",
+    "abstract-bitcoin-wallet"
+  ],
   "author": "Olivier Lalonde <olalonde@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -35,5 +39,5 @@
     "eslint": "^1.6.0",
     "eslint-config-airbnb": "^0.1.0"
   },
-  "version": "0.0.1"
+  "version": "0.1.0"
 }
