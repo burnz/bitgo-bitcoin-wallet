@@ -1,8 +1,8 @@
 # bitgo-bitcoin-wallet
 
-[![Build Status](https://travis-ci.org/olalonde/abstract-bitcoin-wallet.svg)](https://travis-ci.org/olalonde/abstract-bitcoin-wallet)
+[![Build Status](https://travis-ci.org/olalonde/bitgo-bitcoin-wallet.svg)](https://travis-ci.org/olalonde/bitgo-bitcoin-wallet)
 
-Implementation of abstract-bitcoin-wallet for [BitGo](https://www.bitgo.com/api/?javascript).
+Implementation of [abstract-bitcoin-wallet](https://github.com/olalonde/abstract-bitcoin-wallet) for [BitGo](https://www.bitgo.com/api/?javascript).
 
 ## Install
 
