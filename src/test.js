@@ -18,7 +18,7 @@ const wallet = bitgoWallet({
   // spending from outputs with >3 confirms
   // this was an issue with travis running up to 6
   // tests in parallel
-  minConfirms: 3,
+  // minConfirms: 3,
 });
 
 walletTests(wallet);
