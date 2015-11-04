@@ -51,6 +51,10 @@ class BitgoWallet {
       return wallet.getTransaction({ id: hash })
       .then((transaction) => {
         transaction.hash = transaction.id;
+        transaction.outputs.forEach((output) => {
+          output.address = output.account;
+          delete output.account;
+        });
         return transaction;
       });
     });
