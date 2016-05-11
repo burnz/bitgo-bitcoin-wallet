@@ -1,14 +1,12 @@
-import walletTests from 'abstract-bitcoin-wallet';
-import bitgoWallet from './';
-import dotenv from 'dotenv';
-import { BitGo } from 'bitgo';
-
-dotenv.load();
+import test from 'blue-tape'
+import walletTests from 'abstract-bitcoin-wallet'
+import bitgoWallet from './'
+import { BitGo } from 'bitgo'
 
 const bitgo = new BitGo({
   accessToken: process.env.BITGO_TOKEN,
   env: process.env.BITGO_ENV || 'test',
-});
+})
 
 const wallet = bitgoWallet({
   bitgo,
@@ -19,6 +17,14 @@ const wallet = bitgoWallet({
   // this was an issue with travis running up to 6
   // tests in parallel
   // minConfirms: 3,
-});
+})
 
-walletTests(wallet);
+walletTests(wallet)
+
+// Test sendOpReturn (not in abstract-bitcoin-wallet yet)
+test('sendOpReturn', (t) => (
+  wallet.sendOpReturn('some data!').then((transaction) => {
+    t.equal(transaction.status, 'accepted')
+    t.equal(typeof transaction.tx, 'string')
+  })
+))
