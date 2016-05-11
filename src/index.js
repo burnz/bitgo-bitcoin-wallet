@@ -93,7 +93,10 @@ class BitgoWallet {
         amount: 0, // TODO: include fee?
       }]
 
-      return wallet.createTransaction({ recipients })
+      return wallet.createTransaction({
+        recipients,
+        forceChangeAtEnd: true,
+      })
     })
     .then((transaction) => (
       wallet.signTransaction({
