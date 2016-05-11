@@ -8,7 +8,7 @@
     "build": "babel ./src --out-dir ./lib --copy-files",
     "clean": "rm -rf ./lib",
     "pretest": "npm run lint",
-    "test": "npm test:quick",
+    "test": "npm run test:quick",
     "test:quick": "babel-node ./src/test",
     "test:watch": "npm run test -- -w",
     "preversion": "",
