@@ -55,5 +55,5 @@
     "eslint-plugin-import": "^1.7.0",
     "testnet-faucet": "^1.0.4"
   },
-  "version": "0.2.6"
+  "version": "0.3.0"
 }
