@@ -10,6 +10,7 @@ const bitgo = new BitGo({
 
 const wallet = bitgoWallet({
   bitgo,
+  minConfirms: 0,
   walletId: process.env.BITGO_WALLET,
   passphrase: process.env.BITGO_PASSPHRASE,
   // makes test more deterministic by only
