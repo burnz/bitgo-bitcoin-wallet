@@ -14,9 +14,8 @@
     "preversion": "",
     "version:auto": "npm version $(conventional-recommended-bump --preset=angular)",
     "postversion": "git push --tags && git push",
-    "publish:auto": "npm run version:auto && npm publish",
-    "faucet": "testnet-faucet $BITGO_DEPOSIT_ADDRESS",
-    "prepublish": "npm run build"
+    "publish:auto": "npm run build && npm run version:auto && npm publish",
+    "faucet": "testnet-faucet $BITGO_DEPOSIT_ADDRESS"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
