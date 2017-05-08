@@ -1,4 +1,7 @@
 const bitcoinjslib = require('bitcoinjs-lib')
+const initDebug = require('debug')
+
+const debug = initDebug('bitgo-bitcoin-wallet')
 
 class BitgoWallet {
   constructor(config) {
@@ -23,9 +26,11 @@ class BitgoWallet {
   }
 
   _loadWallet() {
+    debug('loading wallet...')
     return this.bitgo.wallets().get({
       id: this.walletId,
     }).then((wallet) => {
+      debug('wallet loaded.')
       this._cache.wallet = wallet
       return wallet
     })
